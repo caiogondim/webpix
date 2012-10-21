@@ -189,6 +189,10 @@ video {
 
 }
 
+.video-grayscale {
+	-webkit-filter: grayscale(100%)
+}
+
 .video-sepia {
 	-webkit-filter: sepia(100%)
 }
