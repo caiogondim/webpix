@@ -59,19 +59,29 @@ video {
 	border-radius: 6px;
 	left: 50%;
 	margin-left: -200px;
-	top: 80px;
-	font-size: 40px;
+	top: 40px;
 	font-weight: 300;
 	text-align: center;
 	color: #CCC;
 	display: block;
-	padding: 20px;
+	padding: 5px 20px 15px 20px;
+	border: 5px solid rgba(255,255,255,0.2);
 }
+
+	.dialogo h1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	.dialogo p {
+		font-size: 15px;
+		line-height: 22px;
+	}
 
 .juarez {
 	position: absolute;
-	bottom: -75px;
-	left: 120px;
+	bottom: -40px;
+	left: 130px;
 }
 
 
