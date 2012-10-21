@@ -5,10 +5,7 @@ var webpix = ( function(){
 		effects: [
 			'normal',
 			'grayscale',
-			'sepia',
-			'blur',
-			'sharpen',
-			'crazy'
+			'sepia'
 		],
 		currentEffect: 0,
 		canvas: null,
@@ -148,6 +145,31 @@ var webpix = ( function(){
 				var b = data[ i+2 ]
 				var v = 0.2126*r + 0.7152*g + 0.0722*b
 				data[ i ] = data[ i+1 ] = data[ i+2 ] = v
+			}
+
+			return data
+		},
+
+		sepia: function( data ){
+
+			for( i = 0; i < data.length; i += 4 ){
+				var r = data[ i ]
+				var g = data[ i+1 ]
+				var b = data[ i+2 ]
+				depth = 20
+
+				v = (0.299 * r) + (0.587 * g) + (0.114 * b)
+				r = g = b = v
+
+				r += depth*2
+				if( r > 255 ) r = 255
+
+				g += depth
+				if( g > 255 ) g = 255
+
+				data[ i ]   = r
+				data[ i+1 ] = g
+				data[ i+2 ] = b
 			}
 
 			return data
