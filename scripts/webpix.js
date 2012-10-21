@@ -78,9 +78,37 @@ var webpix = ( function(){
 			var ctx = canvas.getContext( '2d' )
 			ctx.drawImage( $( 'video' )[0], 0, 0 )
 
-			$( '<img />' )
-				.appendTo( 'body' )
-				.attr( 'src', canvas.toDataURL('image/webp') )
+			$( '.foto' )
+				.attr( 'src', canvas.toDataURL('image/png') )
+				.show()
+			$( '.controle-download' )
+				.attr( 'href', canvas.toDataURL('image/png') )
+			$( 'video' )
+				.hide()
+
+			// atualiza controles
+			$( '.controle-gatilho' )
+				.addClass( 'controle-botao-disabled' )
+			$( '.controle-download' )
+				.removeClass( 'controle-botao-disabled' )
+			$( '.controle-lixeira' )
+				.removeClass( 'controle-botao-disabled' )
+		},
+
+		lixeira: function() {
+			$( '.foto' )
+				.attr( 'src', '' )
+				.hide()
+			$( 'video' )
+				.show()
+
+			// atualiza controles
+			$( '.controle-gatilho' )
+				.removeClass( 'controle-botao-disabled' )
+			$( '.controle-download' )
+				.addClass( 'controle-botao-disabled' )
+			$( '.controle-lixeira' )
+				.addClass( 'controle-botao-disabled' )
 		}
 
 	}

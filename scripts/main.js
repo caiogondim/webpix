@@ -20,3 +20,18 @@ $( '.controle-gatilho' ).click( function( event ) {
 
 	webpix.tirarFoto()
 } )
+
+//
+$( '.controles' ).on(
+	'click',
+	'.controle-download.controle-botao-disabled',
+	function( event ) {
+		event.preventDefault()
+} )
+
+//
+$( '.controle-lixeira' ).click( function( event ) {
+	event.preventDefault()
+
+	webpix.lixeira()
+} )
