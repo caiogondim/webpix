@@ -5,7 +5,8 @@ var webpix = ( function(){
 		effects: [
 			'normal',
 			'grayscale',
-			'sepia'
+			'sepia',
+			'blur'
 		],
 		currentEffect: 0,
 		canvas: null,
@@ -173,6 +174,18 @@ var webpix = ( function(){
 			}
 
 			return data
+		},
+
+		blur: function( data ){
+
+			var lvl    = 6
+			var n      = lvl * lvl
+			var matrix = []
+
+			for( i = 0; i < n; i++ )
+				matrix[ i ] = 1/n
+
+			return this.convolute( data, matrix )
 		},
 
 		lixeira: function() {
