@@ -7,7 +7,8 @@ var webpix = ( function(){
 			'grayscale',
 			'sepia',
 			'blur',
-			'sharpen'
+			'sharpen',
+			'crazy'
 		],
 		currentEffect: 0,
 		canvas: null,
@@ -195,6 +196,17 @@ var webpix = ( function(){
 				[  0,  -1,  0,
 				   -1,  5, -1,
 				   0,  -1,  0 ]
+			)
+		},
+
+		crazy: function( data ){
+
+			return this.convolute( data,
+				[ 0,  0,  1,  0,  0,
+				  0, -1, -1, -1,  0,
+				  1, -1, 20, -1,  1,
+				  0, -1, -1, -1,  0,
+				  0,  0,  1,  0,  0 ]
 			)
 		},
 
