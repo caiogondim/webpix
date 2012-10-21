@@ -1,0 +1,193 @@
+/* Geral
+-------------------- */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	position: absolute;
+	width: 100%;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	height: 100%;
+	background: url(../img/bg.png);
+}
+
+.wrapper {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -216px;
+	margin-left: -350px;
+	width: 700px;
+	height: 432px;
+	background:
+		url(../img/branding.png) no-repeat 660px 15px,
+		url(../img/noise.png),
+		-webkit-linear-gradient(left, #878986, #848484);
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+}
+
+.lcd {
+	position: absolute;
+	top: 7px;
+	right: 50px;
+	width: 557px;
+	height: 418px;
+	background-color: #242415;
+	box-shadow: inset 0 0 10px #000000;
+	overflow: hidden;
+}
+
+video {
+	width: 100%;
+	box-shadow: inset 0 0 10px #000000;
+	display: none;
+}
+
+/* Permissão
+-------------------- */
+
+.dialogo {
+	position: absolute;
+	width: 400px;
+	background: rgba(0, 0, 0, 0.6);
+	border-radius: 6px;
+	left: 50%;
+	margin-left: -200px;
+	top: 80px;
+	font-size: 40px;
+	font-weight: 300;
+	text-align: center;
+	color: #CCC;
+	display: block;
+	padding: 20px;
+}
+
+.juarez {
+	position: absolute;
+	bottom: -75px;
+	left: 120px;
+}
+
+
+/* Controles
+-------------------- */
+
+.controles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 90px;
+	height: 432px;
+}
+
+.controle-botao {
+	position: absolute;
+	left: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	box-shadow: 0 0 3px 3px rgba(255, 255, 255, 0.2);
+}
+
+.controle-botao-disabled {
+	opacity: 0.5;
+}
+
+.controle-gatilho {
+	top: 20px;
+	background:
+		url(../img/camera.png) no-repeat center,
+		-webkit-linear-gradient(top, white, #777777);
+}
+
+.controle-gatilho:active {
+	background:
+		url(../img/camera.png) no-repeat center,
+		-webkit-linear-gradient(bottom, #DDD, #777777);
+}
+
+.controle-download {
+	top: 85px;
+	background:
+		url(../img/download.png) no-repeat center,
+		-webkit-linear-gradient(top, white, #777777);
+}
+
+.controle-download:active {
+	background:
+		url(../img/download.png) no-repeat center,
+		-webkit-linear-gradient(bottom, #DDD, #777777);
+}
+
+.controle-lixeira {
+	top: 150px;
+	background:
+		url(../img/lixeira.png) no-repeat center,
+		-webkit-linear-gradient(top, white, #777777);
+}
+
+.controle-lixeira:active {
+	background:
+		url(../img/lixeira.png) no-repeat center,
+		-webkit-linear-gradient(bottom, #DDD, #777777);
+}
+
+.efeitos {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	height: 170px;
+}
+
+.efeito-next {
+	position: absolute;
+	top: 0;
+	background:
+		url(../img/seta-up.png) no-repeat center,
+		-webkit-linear-gradient(top, white, #777777);
+}
+
+.efeito-next:active{
+	background:
+		url(../img/seta-up.png) no-repeat center,
+		-webkit-linear-gradient(bottom, #DDD, #777777);
+}
+
+.efeito-prev {
+	position: absolute;
+	bottom: 0;
+	background:
+		url(../img/seta-down.png) no-repeat center,
+		-webkit-linear-gradient(top, white, #777777);
+}
+
+.efeito-prev:active {
+		background:
+		url(../img/seta-down.png) no-repeat center,
+		-webkit-linear-gradient(bottom, #DDD, #777777);
+}
+
+.efeito-legenda {
+	position: absolute;
+	bottom: 75px;
+	left: 20px;
+	color: rgb(183,	183, 183);
+	font-size: 16px;
+	-webkit-transform: rotate(-90deg);
+}
+
+/* Efeitos
+-------------------- */
+
+.video-normal {
+
+}
+
+.video-sepia {
+	-webkit-filter: sepia(100%)
+}
+
+.video-blur {
+	-webkit-filter: blur(4px);
+}
