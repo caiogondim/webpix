@@ -22,6 +22,13 @@ $( '.controle-gatilho' ).click( function( event ) {
 } )
 
 //
+$( '.controle-download' ).click( function( event ) {
+	// event.preventDefault()
+
+	return webpix.download()
+} )
+
+//
 $( '.controles' ).on(
 	'click',
 	'.controle-download.controle-botao-disabled',

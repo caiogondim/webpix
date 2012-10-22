@@ -49,8 +49,24 @@ video {
 	width: 100%;
 }
 
+.borda {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 200;
+	top: 0px;
+	box-shadow: inset 0px 0px 12px 4px rgba(0, 0, 0, 0.6);
+}
+
 /* Permissão
 -------------------- */
+
+.permissao {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
 
 .dialogo {
 	position: absolute;
@@ -59,19 +75,29 @@ video {
 	border-radius: 6px;
 	left: 50%;
 	margin-left: -200px;
-	top: 80px;
-	font-size: 40px;
+	top: 40px;
 	font-weight: 300;
 	text-align: center;
 	color: #CCC;
 	display: block;
-	padding: 20px;
+	padding: 5px 20px 15px 20px;
+	border: 5px solid rgba(255,255,255,0.2);
 }
+
+	.dialogo h1 {
+		font-size: 28px;
+		line-height: 32px;
+	}
+
+	.dialogo p {
+		font-size: 15px;
+		line-height: 22px;
+	}
 
 .juarez {
 	position: absolute;
-	bottom: -75px;
-	left: 120px;
+	bottom: -40px;
+	left: 130px;
 }
 
 
@@ -180,19 +206,4 @@ video {
 	color: rgb(183,	183, 183);
 	font-size: 16px;
 	-webkit-transform: rotate(-90deg);
-}
-
-/* Efeitos
--------------------- */
-
-.video-normal {
-
-}
-
-.video-sepia {
-	-webkit-filter: sepia(100%)
-}
-
-.video-blur {
-	-webkit-filter: blur(4px);
 }
