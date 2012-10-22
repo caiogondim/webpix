@@ -13,6 +13,7 @@ var webpix = ( function(){
 		currentEffect: 0,
 		canvas: null,
 		ctx: null,
+		ligada: false,
 
 		init: function() {
 
@@ -29,12 +30,17 @@ var webpix = ( function(){
 
 		iniciaStream: function( stream ) {
 			//
-			$( '.dialogo' ).animate( { top: '-190px' }, 400 )
-			$( '.juarez' ).animate( { bottom: '-290px' }, 400 )
+			$( '.dialogo' ).animate( { top: '-620px' }, 400 )
+			$( '.juarez' ).animate( { bottom: '-290px' }, 400, function(){
+				$( '.permissao' ).remove()
+			} )
 
 			// mostra o vídeo após um determinado tempo para que a
 			// transição dos controles ocorra suave
 			setTimeout( function() {
+				webpix.ligada = true
+				$( '.controle-gatilho' )
+					.removeClass( 'controle-botao-disabled' )
 				$( 'video' )
 					.show()
 					.attr(
@@ -52,6 +58,10 @@ var webpix = ( function(){
 
 		efeitoNext: function(){
 
+			var src = $( '.foto' ).attr( 'src' )
+			if( !this.ligada || src == "" || src == null || src == undefined )
+				return
+
 			if( this.currentEffect == (this.effects.length - 1) )
 				this.currentEffect = 0
 			else
@@ -61,6 +71,10 @@ var webpix = ( function(){
 		},
 
 		efeitoPrev: function(){
+
+			var src = $( '.foto' ).attr( 'src' )
+			if( !this.ligada || src == "" || src == null || src == undefined )
+				return
 
 			if( this.currentEffect == 0 )
 				this.currentEffect = this.effects.length - 1
@@ -107,6 +121,8 @@ var webpix = ( function(){
 		},
 
 		tirarFoto: function() {
+
+			if( !this.ligada ) return
 
 			this.canvas = $( 'canvas' )[0]
 			this.canvas.width = $( 'video' )[0].videoWidth
@@ -256,6 +272,9 @@ var webpix = ( function(){
 		},
 
 		lixeira: function() {
+
+			if( !this.ligada ) return
+
 			$( '.foto' )
 				.attr( 'src', '' )
 				.hide()
@@ -273,8 +292,13 @@ var webpix = ( function(){
 				.addClass( 'controle-botao-disabled' )
 			$( '.efeito-next' )
 				.addClass( 'controle-botao-disabled' )
-		}
+		},
 
+		download: function(){
+
+			var src = $( '.foto' ).attr( 'src' )
+			return this.ligada && src != "" && src != null && src != undefined
+		}
 	}
 
 	return webpix.init()
