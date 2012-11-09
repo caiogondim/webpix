@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+<head>
+	<meta charset='utf-8' />
+	<title>WebPix</title>
+	<link rel="stylesheet" href="styles/main.css" />
+</head>
+<body>
+	<div class="wrapper">
+		<div class="controles">
+			<a href="#" class="
+				controle-gatilho
+				controle-botao
+				controle-botao-disabled"></a>
+			<a download="minha-foto-na-webpix.png" href="#" class="
+				controle-download
+				controle-botao
+				controle-botao-disabled"></a>
+			<a href="#" class="
+				controle-lixeira
+				controle-botao
+				controle-botao-disabled"></a>
+			<div class="efeitos">
+				<a href="#" class="efeito-next controle-botao controle-botao-disabled"></a>
+				<span class="efeito-legenda">Efeitos</span>
+				<a href="#" class="efeito-prev controle-botao controle-botao-disabled"></a>
+			</div>
+		</div>
+		<div class="lcd">
+			<video autoplay></video>
+			<img class="foto" />
+			<img class="fotoOriginal" style="display:none" />
+			<div class="permissao">
+				<img src="img/juarez.png" alt="" class="juarez" />
+				<div class="dialogo">
+					<h1>Libere o acesso a sua câmera!</h1>
+					<p>E vamos falar de <strong>Webpix</strong>, <br />que custa menos de R$1,00 por dia!</p>
+				</div>
+			</div>
+			<div class="borda"></div>
+		</div>
+		<canvas style="display:none"></canvas>
+	</div>
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/webpix.js"></script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>
