@@ -1,9 +1,13 @@
-/* media querie com pequenos ajustes para quando o post estiver
+/* media querie com pequenos ajustes para quando o experimento estiver
 	rodando dentro do loopinfinito.com.br */
 @media all and (max-width: 700px) and (min-width:700px) {
 
+	body {
+		background-image: none !important;
+	}
+
 	.wrapper {
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0) !important;
 	}
 }
 /* Geral
