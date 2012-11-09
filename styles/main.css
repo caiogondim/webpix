@@ -1,3 +1,11 @@
+/* media querie com pequenos ajustes para quando o post estiver
+	rodando dentro do loopinfinito.com.br */
+@media all and (max-width: 700px) and (min-width:700px) {
+
+	.wrapper {
+		box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
 /* Geral
 -------------------- */
 * {
@@ -24,7 +32,7 @@ body {
 		url(../img/branding.png) no-repeat 660px 15px,
 		url(../img/noise.png),
 		-webkit-linear-gradient(left, #878986, #848484);
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.9);
 }
 
 .lcd {
