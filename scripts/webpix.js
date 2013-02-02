@@ -100,7 +100,7 @@ var webpix = ( function(){
 
 		permissaoNegada: function() {
 			alert(
-				'É necessário que você habilite o acesso a câmera' +
+				'É necessário que você habilite o acesso a câmera ' +
 				'para que o experimento funcione')
 		},
 
